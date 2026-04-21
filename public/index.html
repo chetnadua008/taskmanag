@@ -1,16 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<h1>Task App</h1>
+<div class="container">
 
-<input id="taskInput">
-<button onclick="addTask()">Add</button>
+  <header class="header">
+    <h1>📝 Task Manager</h1>
+    <p>Simple Azure Practice Project</p>
+  </header>
 
-<ul id="list"></ul>
+  <section class="card input-card">
+    <div class="input-row">
+      <input 
+        type="text" 
+        id="taskInput" 
+        placeholder="Enter a new task..." 
+        autocomplete="off"
+      />
+      <button onclick="addTask()" class="add-btn">Add</button>
+    </div>
+  </section>
+
+  <section class="card list-card">
+    <div class="task-top">
+      <h2>Your Tasks</h2>
+      <span id="taskCount">0 Tasks</span>
+    </div>
+
+    <ul id="list"></ul>
+  </section>
+
+</div>
 
 <script src="script.js"></script>
 </body>
